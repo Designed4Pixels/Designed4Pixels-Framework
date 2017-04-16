@@ -1,0 +1,174 @@
+//  Foundation for Sites Custom Site Settings
+//  -----------------------------------------
+//
+//  Table of Contents:
+//
+//	1.0 Color
+//		1.1 Accent Colors
+//	2.0 Breakpoints
+//	3.0 Base Typography
+//	4.0 Title Bar
+//	5.0 Top Bar
+//	6.0 Info Bar
+//	7.0 Logo Bar
+//  8.0 Sidebar & Widgets
+//  9.0 Hero Image Feature
+// 10.0 Icon Box Feature
+// 11.0 Parallax Feature
+// 12.0 Call-to-Action Feature
+// 13.0 Footer Columns
+// 14.0 Footer
+// 15.0 Off Canvas
+
+
+
+// 1.0 Color
+// ---------
+
+$content-gray: #f3f4f5;
+$true-black: #000;
+$off-black: #0d0d0d;
+$medium-black: #111;
+$light-black: #222;
+$lighter-black: #333;
+$true-white: #ffffff;
+$off-white: darken($white, 4%);
+$content-background: $content-gray;
+$border-color: $off-white;
+$table-border-color: #d8d8d8;
+$site-desc-color: #999999;
+
+
+// 1.1 Accent Colors
+// -----------------
+
+$accent-color-one: #779ecb;						// Pastel Blue
+$accent-color-two: #428bca; 					// Blue
+$accent-color-three: #dd5454;					// Red
+$accent-color-four: #59a364;					// Green
+$accent-color-five: #9d58e2;					// Violet
+$accent-color-six: darken( #a99e7d, 10% ); 		// Gold
+
+
+// 2.0 Breakpoints
+// ---------------
+
+$media-breakpoint: 64em;
+
+
+// 3.0 Base Typography
+// -------------------
+
+$code-font-size: 0.85em;
+$to-top-background: rgba( 150, 150, 150, 0.7);
+
+
+// 4.0 Title Bar
+// -------------
+
+$titlebar-border-color: $border-color;
+
+
+// 5.0 Top Bar
+// -----------
+
+$topbar-border-color: $border-color;
+$topbar-link-color: get-color(primary);
+$topbar-shadow: 0 1px 2px 3px rgba(0, 0, 0, 0.1);
+
+
+// 6.0 Info Bar
+// ------------
+
+$infobar-padding: 0.2rem;
+$infobar-left-padding: 0 0 0 0.4rem;
+$infobar-right-padding: 0;
+$infobar-background: $white;
+$infobar-border-color: $border-color;
+$infobar-text-color: #777;
+$infobar-input-width: 200px;
+
+
+// 7.0 Logo Bar
+// ------------
+
+$logobar-padding: 0 !default;
+$logobar-left-widget-padding: 0.3rem !default;
+$logobar-right-widget-padding: 0 0.3rem !default;
+$logobar-background: $white !default;
+$logobar-border-color: $off-white;
+$logobar-link-color: #888 !default;
+$logobar-input-width: 200px !default;
+$logobar-height: 68px !default;
+$logobar-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+$nav-hover-background: $off-white;
+$nav-hover-color: #666;
+
+
+// 8.0 Sidebar & Widgets
+// ----------------------
+
+$sidebar-widget-background: $body-background;
+$sidebar-first-widget-padding-top: 0;
+$sidebar-first-widget-margin-top: 0;
+
+
+// 9.0 Hero Image Feature
+// -----------------------
+
+$image-feature-mask: rgba(255, 255, 255, 0.7);
+$image-feature-background: $light-black;
+$image-feature-color: #999;
+$image-feature-header-color: #666;
+
+
+// 10.0 Icon Box Feature
+// ---------------------
+
+$icon-feature-padding: 4.0rem 1.0rem 3.5rem;
+$icon-box-color: #999;
+$icon-font-background: #f3f3f3;
+$icon-font-border: #e8e8e8;
+
+
+// 11.0 Parallax Feature
+// ---------------------
+
+$parallax-image-mask: rgba(255, 255, 255, 0.7);
+$parallax-header-color: #444;
+$parallax-font-color: #777;
+
+
+// 12.0 Call-to-Action Feature
+// ---------------------------
+
+$cta-feature-background: #fefefe;
+$cta-feature-color: #c6c6c6; 
+$cta-feature-border: #f1f1f1;
+$cta-feature-header-color: $white;
+$cta-feature-sub-header-color: #999;
+$cta-feature-hr-color: darken( $cta-feature-background, 10% );
+$cta-feature-hr-width: 600px;
+$cta-feature-button-border: darken( $cta-feature-background, 25% );
+
+
+// 13.0 Footer Columns
+// -------------------
+
+$footer-col-background: $white;
+$footer-col-border-color: $off-white;
+$footer-col-header-color: #666;
+$footer-col-color: #999;
+
+
+// 14.0 Footer
+// -----------
+
+$footer-background: $white;
+$footer-border-top: $border-color;
+
+
+// 15.0 Off Canvas Settings
+// ------------------------
+
+$offcanvas-inner-margin: 9rem 0 0;

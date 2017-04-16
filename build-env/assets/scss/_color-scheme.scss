@@ -1,0 +1,102 @@
+/*
+
+Stylesheet: Color Scheme Stylesheet
+
+This stylesheet is used to set-up the Designed4Pixels Accent Color & Color Schemes
+
+*/
+
+/* ## Accent Color Scheme ## */
+
+/* Color: Pastel Blue (Default) */
+
+.color-one {
+	@include accent-color( $media-breakpoint, $color: $accent-color-one );
+}
+
+
+/* Color: Blue */
+
+.color-two {
+	@include accent-color( $media-breakpoint, $color: $accent-color-two );
+}
+
+
+/* Color: Red */
+
+.color-three {
+	@include accent-color( $media-breakpoint, $color: $accent-color-three );
+}
+
+
+/* Color: Green */
+
+.color-four {
+	@include accent-color( $media-breakpoint, $color: $accent-color-four );
+}
+
+
+/* Color: Violet */
+
+.color-five {
+	@include accent-color( $media-breakpoint, $color: $accent-color-five );
+}
+
+
+/* Color: Gold */
+
+.color-six {
+	@include accent-color( $media-breakpoint, $color: $accent-color-six );
+}
+
+
+/* ## Theme Color Schemes ## */
+
+/* Settings for the Dark Color Scheme */
+
+@include color-scheme(
+
+					 $class: 'dark-color-scheme',
+					 $infobar-background: $black,
+					 $infobar-border-color: $medium-black,
+					 $infobar-text-color: $white,
+					 $titlebar-background: $black,
+					 $titlebar-border-color: $light-black,
+					 $logobar-background: $black,
+					 $logobar-border-color: $light-black,
+					 $body-background: $content-gray,
+					 $inner-background-color: $content-gray,
+					 $body-font-color: #666,
+					 $header-font-color: #48545a,
+					 $heading-link-color: #48545a,
+					 $border-color: #e8e8e8,
+					 $nav-hover-background: $medium-black,
+					 $nav-hover-color: $white,
+					 $anchor-color: #aaa,
+					 $icon-box-color: #bbb,
+					 $icon-header-font-color: #ddd,
+					 $icon-font-background: $medium-black,
+					 $icon-font-border: 1px solid $black,
+					 $image-feature-mask: rgba(0, 0, 0, 0.6),
+					 $image-feature-color: #bbb,
+					 $image-feature-header-color: #fff,
+					 $parallax-image-mask: rgba(0, 0, 0, 0.80),
+					 $parallax-header-color: #ddd,
+					 $parallax-font-color: #bbb,
+					 $parallax-border-color: $black,
+					 $parallax-hr-color: #444,
+					 $cta-feature-background: #779ECB,
+					 $cta-feature-color: #eee,
+					 $cta-feature-header-color: $white,
+					 $cta-feature-sub-header-color: #999,
+					 $footer-col-background: $medium-black,
+					 $footer-col-border-color: #242424,
+					 $footer-col-header-color: #888,
+					 $footer-col-color: #ccc,
+					 $footer-background: $black,
+					 $footer-border-top: $medium-black,
+					 $footer-icon-color: #111,
+					 $to-top-background: rgba( 10, 10, 10, 0.7),
+					 $media-breakpoint: 64em 
+);
+

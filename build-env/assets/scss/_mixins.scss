@@ -1,0 +1,500 @@
+// ****************************************************************
+// Mixins & Constants
+// This section loads in the Mixins & Constants in the background.
+// ******************************************************************
+
+
+@mixin accent-color( $media-breakpoint: 64em, $color: #779ecb ) {
+
+    	.accent-color { 
+    		color: $color !important;
+    	}
+
+		.pagination .current {
+			background: $color;
+		}
+
+		.icon-feature .icon-font {
+			color: $color;
+		}
+
+		.logo-bar li > a:hover {
+			border-bottom: 2px solid $color;
+		}
+
+		.logo-bar li > a:focus {
+			border-bottom: 2px solid $color;
+		}
+
+		.logo-bar .current-menu-item > a {
+			border-bottom: 2px solid $color;
+		}
+
+		.info-bar a {
+			color: $color;
+		}
+
+		.info-bar a:hover {
+			color: darken( $color, 10% );
+		}
+
+		a {
+			color: $color;
+		}
+
+		a:hover {
+			color: darken( $color, 10% );
+		}
+
+		input::-moz-placeholder, textarea::-moz-placeholder {
+			border: 1px solid $color; color: $color;
+		}
+
+		.commentlist .bypostauthor {
+			border-top: 2px solid $color;
+		}
+
+		blockquote {
+    		border-left: 2px solid $color;
+		}
+
+
+    	@media screen and (max-width: $media-breakpoint) {
+
+
+			.title-bar button, .title-bar button:hover { 
+				border: none;
+			}
+
+			.title-bar-left h1 a {
+    			color: $color;
+			}
+
+			.logo-bar .current-menu-item > a, .logo-bar li > a:hover, .logo-bar li > a:focus {
+				border-left: 2px solid $color;
+				border-bottom: none;
+			}
+		}
+}
+
+// Color Scheme Settings - Default Settiings are for the Dark Color Scheme
+
+@mixin color-scheme( $class: 'dark-color-scheme',
+					 $infobar-background: $black,
+					 $infobar-border-color: $medium-black,
+					 $infobar-text-color: $white,
+					 $titlebar-background: $black,
+					 $titlebar-border-color: $light-black,
+					 $logobar-background: $black,
+					 $logobar-border-color: $light-black,
+					 $body-background: $content-gray,
+					 $inner-background-color: $content-gray,
+					 $body-font-color: #666,
+					 $header-font-color: #48545a,
+					 $heading-link-color: #48545a,
+					 $border-color: #e8e8e8,
+					 $nav-hover-background: $medium-black,
+					 $nav-hover-color: $white,
+					 $anchor-color: #aaa,
+					 $icon-box-color: #bbb,
+					 $icon-header-font-color: #ddd,
+					 $icon-font-background: $medium-black,
+					 $icon-font-border: 1px solid $black,
+					 $image-feature-mask: rgba(0, 0, 0, 0.6),
+					 $image-feature-color: #bbb,
+					 $image-feature-header-color: #fff,
+					 $parallax-image-mask: rgba(0, 0, 0, 0.85),
+					 $parallax-header-color: #ddd,
+					 $parallax-font-color: #bbb,
+					 $parallax-border-color: $black,
+					 $parallax-hr-color: #444,
+					 $cta-feature-background: #779ECB,
+					 $cta-feature-color: #eee,
+					 $cta-feature-header-color: $white,
+					 $cta-feature-sub-header-color: #999,
+					 $footer-col-background: $medium-black,
+					 $footer-col-border-color: #242424,
+					 $footer-col-header-color: #888,
+					 $footer-col-color: #ccc,
+					 $footer-background: $black,
+					 $footer-border-top: $medium-black,
+					 $footer-icon-color: #111,
+					 $to-top-background: rgba( 10, 10, 10, 0.7),
+					 $media-breakpoint: 64em )
+{
+
+	body.#{$class} { 
+	background: $body-background;
+	color: $body-font-color;
+	}
+
+
+	.#{$class} {
+
+		.sticky {
+    		box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+		}
+
+		.to-top {
+			background-color: $to-top-background;
+		}
+
+		h1, .h1,
+		h2, .h2,
+		h3, .h3 {
+    		color: $header-font-color;
+		}
+
+		.archive-header {
+			color: #a0a0a0;
+			border-bottom: solid 2px $border-color;
+		}
+
+		.archive-header > h1 {
+			color: #a0a0a0;
+		}				
+
+		.info-bar {
+  			background-color: $infobar-background;
+  			color: $infobar-text-color;
+  			border-bottom: solid 1px $infobar-border-color;
+		}
+
+		.info-bar, .info-bar ul {
+    		background-color: $infobar-background;
+		}
+
+		.logo-bar {
+  			background-color: $logobar-background;
+  			border-top: solid 1px $logobar-border-color;
+  			box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);	
+		}
+
+		.logo-bar ul {
+  			background-color: $logobar-background;	
+		}
+
+		.logo-bar li > a {
+    		color: $anchor-color;
+    		border-bottom: 2px solid $logobar-background;
+		}
+
+		.logo-bar li > a:hover, 
+		.logo-bar li > a:focus {
+     		background-color: $light-black;
+  		}
+
+		.logo-bar .current-menu-item > a {
+    		background-color: $light-black;
+    		color: $nav-hover-color !important;
+		}
+
+		.title-bar {
+    		background: $titlebar-background;
+    		border-top: 1px solid $titlebar-border-color;
+    		color: #5b6971;
+		}
+
+		.menu-icon::after {
+    		background: #f4f4f4;
+    		box-shadow: 0 7px 0 #f4f4f4, 0 14px 0 #f4f4f4;
+		}
+
+		.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+    		border-color: #bbb transparent transparent;
+		}
+
+		.is-dropdown-submenu-item > a {
+    		color: #aaa;
+		}
+
+ 		.is-dropdown-submenu > li.is-submenu-item > a:hover, li.is-submenu-item > a:focus {
+    		color: #aaa;
+    		border-bottom: none;
+		}
+
+		.is-dropdown-submenu { 
+   			background: $black;
+   			border: 1px solid $light-black;
+		}
+
+		.is-dropdown-submenu > li {
+    		border-bottom: $light-black 1px solid;
+		}
+
+		.is-dropdown-submenu > li.current-menu-item > a {
+   			border-bottom: 1px solid $black;
+   			color: #5b6971;
+   			background-color: $light-black;
+		}
+
+		.is-dropdown-submenu > li:last-child {
+      		border-bottom: none;
+  		}
+
+
+  		// Off-canvas Settings
+  		// -------------------
+
+  		.off-canvas {
+    		background: $body-background;
+		}
+
+  		.off-canvas-content {
+			background-color: transparent;
+		}
+
+		#content #inner-content {
+			background-color: $inner-background-color;
+		}
+
+		#content #inner-content #main {
+			background-color: $inner-background-color;
+		}
+
+		.article-header h2 > a {
+    		color: $header-font-color;
+		}
+
+		.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+			border-color: #b0b0b0 transparent transparent;
+		}
+
+		.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
+			background-color: $light-black;
+			border: 1px solid $black;
+			color: $white;
+		}
+
+		button:hover, .button:hover,  input[type="button"]:hover, input[type="submit"]:hover{
+			background-color: darken( $light-black, 15% );
+			border: 1px solid $black;
+		}
+
+		.button.secondary {
+			background-color: map-get($foundation-palette, secondary);
+			border: 1px solid darken( map-get($foundation-palette, secondary), 10% );
+			color: #fff;
+		}
+
+		.button.secondary:hover {
+			background-color: darken( map-get($foundation-palette, secondary), 10% );
+		}
+
+		.button.alert {
+    		background-color: get-color(alert);
+    		border: 1px solid darken( get-color(alert), 10% );
+		}
+
+		.button.alert:hover {
+    		background-color: darken( get-color(alert), 10% );
+		}
+
+		.button.success {
+    		background-color: get-color(success);
+    		border: 1px solid darken( get-color(success), 10% );    		
+		}
+
+		.button.success:hover {
+    		background-color: darken( get-color(success), 10% );
+		}
+
+		.parallax-feature .image-mask, .parallax-custom .image-mask {
+    		background-color: $parallax-image-mask;
+		}
+
+		.parallax-feature {
+    		border-top: 5px solid $parallax-border-color;
+		}
+
+		.parallax-content {
+    		color: $parallax-font-color;
+
+    		h1, h2, h3 {
+    			color: $parallax-header-color;
+    		}
+
+			hr {
+    			border: solid $parallax-hr-color;
+    			border-width: 1px 0 0;
+    		}
+
+    		.button {
+    			color: $true-white !important;
+				background-color: transparent;
+				border: 1px solid $true-white !important;
+			}
+		}
+
+		.image-feature h1 {
+    		color: $image-feature-header-color;
+		}
+
+		.image-feature .narrow-container {
+    		color: $body-font-color;
+		}
+
+		.image-feature .image-mask {
+    		background-color: $image-feature-mask;
+		}
+
+		.icon-feature {
+			background-color: $black;
+			border-top: 5px solid $medium-black;
+		}
+
+		.icon-feature .icon-font {
+    		background-color: $icon-font-background;
+    		border: 1px solid $icon-font-border;
+		}
+
+		.icon-feature .icon-box {
+    		color: $icon-box-color;
+		}
+
+		.icon-feature h2 {
+    		color: $icon-header-font-color;
+		}		
+
+		.widget {
+    		background-color: $body-background;
+    		color: #6a6a6a;
+		}
+
+		.footer-cols {
+			background-color: $footer-col-background;
+			color: $footer-col-color;
+			border-top: solid 5px $footer-col-border-color;
+		}
+
+		.footer-cols .widgettitle {
+    		color: $footer-col-header-color;
+    		border-bottom: solid 3px $footer-col-border-color;
+		}
+
+		.footer-cols li {
+    		border-bottom: solid 1px $footer-col-border-color;
+		}
+
+		.footer-cols .menu > li {
+    		border-bottom: solid 1px $footer-col-border-color;
+		}
+
+		.footer {
+			background-color: $footer-background;
+			border-top: solid 5px $footer-border-top;
+			color: $body-font-color;
+		}
+
+		.footer #footer-right a::before {
+    		background-color: $footer-icon-color;
+		}
+
+		.content-feature {
+			background-color: $body-background;
+		}
+
+
+		// Call-to-Action Feature Settings
+		// -------------------------------
+
+		.cta-feature {
+			color: $cta-feature-color;
+			background-color: $cta-feature-background;
+			border-top: solid 5px $cta-feature-border;
+		}
+
+		.cta-feature h1 {
+    		color: $cta-feature-header-color;
+		}
+
+		.cta-feature h2 {
+    		color: $cta-feature-sub-header-color;
+		}
+
+		.cta-feature hr {
+    		border: solid 1px $cta-feature-hr-color;
+		}
+
+
+		// Plugin Customization Settings
+		// -----------------------------
+
+		.mc4wp-form-fields input[type="text"],
+		.mc4wp-form-fields input[type="email"],
+		.mc4wp-form-fields input[type="url"],
+		.mc4wp-form-fields textarea {
+    		background: $body-background;
+		}
+
+		@media screen and (max-width: $media-breakpoint) {
+
+			.logo-bar {
+  				background-color: $logobar-background;
+  				border-top: solid 1px $logobar-border-color;
+
+  				li {
+    				border-bottom: 1px solid $logobar-border-color;
+  				}
+
+  				li > a {
+    				color: $anchor-color; /* #888 */
+    				border-left: 2px solid $logobar-border-color;
+  				}
+
+  				li > a:hover, li > a:focus {
+      				color: $anchor-color;
+      				border-left: 2px solid $black;
+      				background-color: #111; 
+    			}
+
+  				.current-menu-item > a {
+    				color: $anchor-color !important;
+    				background-color: #222;
+  				}
+
+  				// Mobile Accordion Menu Settings
+  				// ------------------------------
+
+  				.menu-item-has-children {
+  					border-bottom: solid 1px $logobar-border-color;;
+  				}
+
+  				.menu-item-has-children > ul > li:last-child {
+  					border-bottom: none;
+  				}
+
+  				.menu-item-has-children > ul > li:first-child {
+  					border-top: solid 1px $logobar-border-color;
+  				}
+
+  				.is-accordion-submenu-parent:focus {
+  					border-left: 2px solid $logobar-border-color;
+  				}
+
+  				.is-accordion-submenu {
+   					background: #000;
+   					border-top: solid 1px #000;
+   				}
+
+   				.is-accordion-submenu > li.current-menu-item > a {
+   					color: $anchor-color;
+   					background-color: #222;
+   				}
+
+   				 .is-accordion-submenu-item > a, .current-menu-item > a {
+    				color: $anchor-color; 
+  				}
+
+  				.is-accordion-submenu > li.is-submenu-item > a:hover, li.is-submenu-item > a:focus {
+    				color: $off-white;
+    				border-bottom: 2px solid $black;
+   				}
+
+
+			}
+		}
+	}
+}
+
+

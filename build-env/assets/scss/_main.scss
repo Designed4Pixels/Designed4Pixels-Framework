@@ -1,0 +1,2072 @@
+/*
+
+# Stylesheet: Main Stylesheet
+------------------------------------------------------ */
+
+/* # Table of Contents
+-----------------------
+
+1.0 Default Styles
+2.0 Typography
+	2.1 Heading Styles
+3.0 Header Styles
+	3.1 Info Bar Styles
+	3.2 Site Title & Description Styles
+	3.3 Logo Bar (Main Navigation)
+	3.4 Title Bar (Mobile Navigation)
+	3.5 Top Bar
+4.0 Page Navigation Styles
+    4.1 Scroll-to-Top Button
+5.0 Post & Content Styles
+6.0 Off-Canvas Styles
+7.0 Image Gallery Styles
+8.0 Slider Styles
+9.0 Comment Styles
+	9.1 Comment Form Styles
+10.0 Sidebars & Asides
+11.0 Footer Styles
+	11.1 Footer Column Styles
+	11.2 Footer Bar Styles
+12.0 Home Page - Featured Section Styles
+	12.1 Slider Feature Styles
+	12.2 Hero Image Feature Styles
+	12.3 Icon Box Feature Styles
+	12.4 Content Feature Styles
+	12.5 Call-to-Action Feature Styles
+	12.6 Parallax Feature Styles
+13.0 Portfolio Page Styles
+14.0 Foundation Styles
+15.0 Accessibility
+16.0 Multisite Styles
+17.0 Plugin Styles
+	17.1 Mailchimp Forms
+	17.2 Gravity Forms
+	17.3 BBPress
+	17.4 EDD Downloads Featured Info 
+	17.5 Easy Digital Downloads
+
+------------------------------------------------------ */
+
+
+
+/* # 1.0: Default Styles 
+------------------------------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $body-background;
+    font-family: $body-font-family;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $body-font-color;
+}
+
+hr {
+    border-bottom: $hr-border;
+    clear: both;
+    margin: 1.25rem auto 1.6875rem;
+    height: 0;
+    max-width: 600px;
+    display: block;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+blockquote {
+    margin: 0 1rem 1rem;
+}
+
+abbr[title] {
+    border-bottom: none;
+  }
+
+a, a:visited {
+
+	&:link {
+		//Highlight links on iOS, Similar to :hover for mobile devices.
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+.text-center { 
+	text-align: center; 
+}
+
+.text-left { 
+	text-align: left; 
+}
+
+.read-more {
+	display: block;
+	margin: 30px 8px 30px 0px;
+}
+
+
+
+/* # 2.0: Typography 
+------------------------------------------------------ */
+
+/* ## 2.1: Heading Styles 
+------------------------------------------------------ */
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+
+	font-family: $header-font-family;
+	color: $header-color;
+	margin-top: 0;
+  	margin-bottom: 0;
+  	line-height: 1.2;
+
+	// Removing text decoration from all headline links
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size:1.6rem;
+}
+
+h2, .h2 {
+	font-size:1.35rem;
+}
+
+h3, .h3 {
+	font-size:1.3rem;
+}
+
+h4, .h4 {
+	font-size:1.2rem;
+}
+
+h5, .h5 {
+	font-size:1.125rem;
+}
+
+h6, .h6 {
+	font-size:1rem;
+}
+
+.subheader {
+    line-height: 1.6;
+    color: #bbb;
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header {
+	ul.off-canvas-list li {
+		list-style: none;
+	}
+}
+
+
+/* # 3.0: Header Styles 
+------------------------------------------------------ */
+
+/* ## 3.1: Info Bar Styles
+------------------------------------------------------ */
+
+.info-bar {
+  	background-color: $infobar-background;
+  	color: $infobar-text-color;
+  	border-bottom: solid 1px $infobar-border-color;
+  	font-size: 14px;
+  	line-height: 1.6;
+  	padding-top: 0.1rem;
+
+	&, ul {
+		background-color: $infobar-background;
+   		margin: 0;
+	}
+
+  	li {
+    	list-style-type: none;
+  	}
+
+  	input {
+    	width: $infobar-input-width;
+    	margin-right: 1rem;
+  	}
+
+  	.info-bar-left {
+      	float: left;
+      	padding: $infobar-left-padding;
+  	}
+
+  	.info-bar-right {
+      	float: right;
+      	padding: $infobar-right-padding;
+  	}
+}
+
+.nav-icon-menu {
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    padding-right: 8px;
+}
+
+#infobar-icons ul {
+	list-style-type: none;
+	width: 135px;
+	margin: 0 auto;
+}
+
+#infobar-icons ul > li {
+	display: inline-block;
+	padding: 0;
+}
+
+#infobar-icons a:before {
+   	font-family: FontAwesome;
+   	content: "\25AE";
+   	background-color: inherit;
+   	display: inline-block;
+   	width: 25px;
+   	text-align: center;
+}
+
+#infobar-icons a[href*="facebook.com"]:before {
+    content: "\f09a";
+}
+
+#infobar-icons a[href*="dribbble.com"]:before {
+    content: "\f17d";
+}
+
+#infobar-icons a[href*="twitter.com"]:before {
+    content: "\f099";
+}
+
+#infobar-icons a[href*="mailto:"]:before {
+    content: "\f0e0";
+}
+
+.vertical {
+	width: 100%;
+}
+
+
+@media screen and (max-width: $media-breakpoint) {
+
+	.info-bar-left {
+      	float: left;
+  	}
+
+  	.info-bar-right {
+      	float: right
+  	}
+
+}
+
+
+/* ## 3.2 Site Title & Description Styles
+------------------------------------------------------ */
+
+.site-title {
+	line-height: 1.0;
+	font-size: 1.55rem;
+}
+
+.site-description {
+    color: $site-desc-color;
+	margin-bottom: 0;
+	line-height: 1.4;
+}
+
+
+/* ## 3.3 Logo Bar (Main Navigation) 
+------------------------------------------------------ */
+
+.logo-img {
+    width: 253px;
+    height: 45px;
+    text-indent: -9999px;
+    margin: 12px 0 11px;
+}
+
+.logo-bar {
+  	background-color: $logobar-background;
+  	border-top: solid 1px $logobar-border-color;
+  	padding: $logobar-padding;
+    box-shadow: $logobar-shadow;
+
+	&, ul {
+		background-color: $logobar-background;
+   		margin: 0;
+	}
+
+	ul > li {
+		padding-left: 0;
+	}
+
+  	li > a {
+    	color: $logobar-link-color;
+    	text-decoration: none;
+    	border-bottom: 2px solid $white;
+    	display: block;
+    	padding: 25px 24px 25px;
+    	margin: 0 2px;
+  	}
+
+  	li > a:hover, li > a:focus {
+     	color: $nav-hover-color;
+     	text-decoration: none;
+     	border-bottom: 2px solid $primary-color;
+     	background-color: $nav-hover-background;
+  	}
+
+  	.current-menu-item > a {
+  		color: $nav-hover-color !important;
+    	text-decoration: none;
+    	border-bottom: 2px solid $primary-color;
+    	background-color: $nav-hover-background;
+  	}
+
+  	.logo-bar-right {
+    	float: right;
+    	padding: $logobar-right-widget-padding;
+  	}
+
+  	.logo-bar-left {
+    	float: left;
+    	padding: $logobar-left-widget-padding;
+    	margin-top: 0.4rem;
+  	}
+
+  	.logo-img {
+    	margin-top: 0.7rem;
+  	}
+
+  	.is-dropdown-submenu-item > a {
+    	color: #888;
+    	text-decoration: none;
+    	border: none;
+    	display: block;
+    	padding: 12px 24px 12px 10px;
+    	margin: 2px 0px;
+  	}
+
+  	.is-dropdown-submenu > li {
+    	border-bottom: $border-color 1px solid;
+	}
+
+  	.is-dropdown-submenu > li:last-child {
+    	border-bottom: $white 1px solid;
+	}
+
+  	.is-dropdown-submenu > li.is-submenu-item > a:hover, li.is-submenu-item > a:focus {
+    	color: $nav-hover-color;
+    	text-decoration: none;
+    	border-bottom: none;
+   	}
+
+  	.is-dropdown-submenu { 
+   		min-width: 300px;
+   		background: $white;
+   		border: 1px solid $border-color;
+   		padding: 0px 3px;
+  	}
+
+  	.is-dropdown-submenu > li.current-menu-item > a {
+   		border-bottom: 1px solid $white;
+   		color: $nav-hover-color;
+   		background-color: $off-white;
+  	}
+
+  	.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+		display: block;
+  		width: 0;
+  		height: 0;
+  		border: inset 4px;
+  		content: '';
+  		border-bottom-width: 0;
+  		border-top-style: solid;
+  		border-color: #bbb transparent transparent;
+  		right: 5px;
+  		margin-top: -1px;
+	}
+
+}
+
+.hide-not-fixed {
+	display: none;
+}
+
+.fixed {
+  	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+}
+
+.off-canvas-list {
+	ul {
+		margin-left: 0;
+		li {
+			a {
+				border-bottom: 0px;
+			}
+		}
+		.dropdown {
+			margin-left: 20px;
+		}
+	}
+}
+
+
+@media screen and (max-width: $media-breakpoint) {
+
+.logo-bar {
+  	background-color: $logobar-background;
+  	border-top: solid 1px $logobar-border-color;
+  	box-shadow: $logobar-shadow;
+
+  	li {
+  		border-bottom: 1px solid $border-color;
+  	}
+
+  	li > a {
+    	color: $logobar-link-color;
+    	text-decoration: none;
+    	border-left: 2px solid $white;
+    	display: block;
+    	padding: 14px 24px 14px;
+    	margin: 2px 0px;
+  	}
+
+  	li > a:hover, li > a:focus {
+      	color: $nav-hover-color;
+      	text-decoration: none;
+      	border-left: 2px solid $primary-color;
+      	border-bottom: none;
+      	background-color: $nav-hover-background;
+    }
+
+  	.current-menu-item > a {
+    	color: $nav-hover-color !important;
+    	text-decoration: none;
+    	border-left: 2px solid $primary-color;
+    	background-color: $nav-hover-background;
+  	}
+
+  	.logo-bar-right {
+    	float: none;
+    	padding: 0;
+  	}
+
+  	.logo-bar-left {
+    	margin-top: 0.4rem;
+  	}
+
+  	.menu-item-has-children {
+  		border-bottom: solid 1px $border-color;
+  	}
+
+  	.menu-item-has-children > ul > li:last-child {
+  		border-bottom: none;
+  	}
+
+  	.is-accordion-submenu-parent > li {
+  		border-top: solid 1px $border-color;
+  	}
+
+  	.is-accordion-submenu-parent > a::after {
+    	display: block;
+    	width: 0;
+    	height: 0;
+    	border: 4px inset;
+    	content: "";
+    	border-bottom-width: 0;
+    	border-top-style: solid;
+    	border-color: #bbb transparent transparent;
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -1px;
+    	right: 1rem;
+	}
+
+  	.is-accordion-submenu-item > a, .current-menu-item > a {
+    	color: $logobar-link-color;
+    	text-decoration: none;
+    	border: none;
+    	display: block;
+    	padding: 14px 24px 14px;
+    	margin: 2px 0px;
+    	border-bottom: none;
+    	width: 100%;
+  	}
+
+  	.is-accordion-submenu > li.is-submenu-item > a:hover, .is-accordion-submenu > li.is-submenu-item > a:focus {
+    	color: $logobar-link-color;
+    	text-decoration: none;
+    	border-bottom: none;
+   	}
+
+   	.is-accordion-submenu {
+   		background: $white;
+   		padding: 0px;
+   		border-top: solid 1px $border-color;
+   	}
+
+   	.is-accordion-submenu > li.current-menu-item > a {
+   		width: 100%;
+   		//border-bottom: 2px solid $border-color;
+   		      	border-bottom: none;
+   		color: $logobar-link-color;
+   		background-color: $white;
+   	}
+
+   .menu.nested {
+   		margin-left: 0em;
+   }
+
+}
+
+}
+
+
+/* ## 3.3 Title Bar (Mobile Navigation) 
+------------------------------------------------------ */
+
+.title-bar {
+	background: $titlebar-background;
+    border-top: 1px solid $titlebar-border-color;
+	padding: $titlebar-padding;
+	box-shadow: $logobar-shadow;
+}
+
+.title-bar-right {
+    padding: 10px 0px;
+}
+
+.menu-icon::after {
+	width: 70%;
+	background-color: #888;
+	box-shadow: 0 7px 0 #888,0 14px 0 #888;
+}
+
+button.menu-icon, button.menu-icon:hover, button.menu-icon:focus {
+	border: none;
+	background-color: transparent !important;
+}
+
+.menu.nested {
+	margin-left: 0em;
+}
+
+
+@media screen and (max-width: $media-breakpoint) {
+
+	#title-logo {
+		width: 253px;
+    	height: 45px;
+    	text-indent: -9999px;
+    	margin-top: 6px;
+	}
+
+	.title-bar button { 
+		border: none;
+	}
+
+	.title-bar-left { 
+		margin-top: 0.4rem;
+	}
+
+}
+
+
+
+/* ## 3.3 Top Bar 
+------------------------------------------------------ */
+
+.top-bar {
+	background-color: $topbar-background;
+
+    &.shadow {
+  		-webkit-box-shadow: $topbar-shadow;
+  		-moz-box-shadow:    $topbar-shadow;
+  		box-shadow:         $topbar-shadow;
+
+	}
+
+	.title-area {
+		z-index: 1;
+	}
+}
+
+
+
+
+/* # 4.0 Page Navigation Styles 
+------------------------------------------------------ */
+
+.page-navigation {
+	margin-top: 1rem;
+}
+
+.pagination li {
+	background-color: #e9e9e9;
+    font-size: 0.875rem;
+    margin-right: 0.25rem;
+    padding-left: 0;
+    border-radius: 0;
+    text-align: center;
+}
+
+
+/* # 4.1: Scroll-to-Top Button 
+------------------------------------------------------ */
+
+.to-top {
+	display:inline-block;
+	height:40px;
+	width:40px;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	box-shadow:0 0 10px rgba(0,0,0,0.05);
+	overflow:hidden;
+	text-indent:100%;
+	white-space:nowrap;
+	background: $to-top-background url(./assets/images/to-top.svg) no-repeat center 50%;
+	visibility:hidden;
+	opacity:0;
+	-webkit-transition:all .3s;
+	-moz-transition:all .3s;
+	transition:all .3s;
+	border-radius: 40px;
+	border: none;
+}
+
+.to-top:focus {
+	outline: none;
+}
+
+.to-top.top-is-visible {
+	visibility:visible;
+	opacity:1;
+}
+
+.to-top.top-fade-out {
+	opacity:.5;
+}
+
+.no-touch .to-top:hover {
+	background-color:#e86256;
+	opacity:1;
+}
+
+@media only screen and (min-width: 768px) {
+	.to-top {
+		right:20px;
+		bottom:20px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.to-top {
+		height:60px;
+		width:60px;
+		right:30px;
+		bottom:30px;
+	}
+}
+
+
+
+/* # 5.0 Post & Content Styles 
+------------------------------------------------------ */
+
+#content {
+	#inner-content {
+
+		padding: 6rem 0rem 4rem 0rem;
+		background-color: $body-background;
+
+		#main {
+			padding: 1rem 1rem 1rem;
+			border-radius: $global-radius;
+			background-color: $body-background;
+		}
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.narrow {
+	max-width: 44rem;
+}
+
+.page-title {
+	
+	// Remove Foundation vcard styling from author page titles
+	.vcard {
+		border: 0px;
+		padding: 0px;
+	}
+}
+
+.article-header, .page-header {
+
+	margin-bottom: 1.0rem;
+
+	h1 > a, h1 > a:hover, h2 > a, h2 > a:hover {
+		color: $header-color;
+	}
+}
+
+.archive-header {
+
+	border-bottom: 2px solid $border-color;
+	padding-bottom: 10px;
+	margin-bottom: 2.5rem;
+
+	& > h1 {
+		font-size:1.3rem;
+		color: #a0a0a0;
+	}
+
+	p {
+	    color: #a9a9a9;
+    	margin: 0.3rem 0 0;
+    }
+
+}
+
+.article-footer {
+	.tags-title {
+		font-size: $small-font-size;
+		border-top: solid 1px #D8DCDF;
+		border-bottom: solid 1px #D8DCDF;
+		padding: 1em 0;
+		margin: 1.0em 0 3.5em;
+	}
+}
+
+// Post meta  
+.byline, .logged-in-as {
+	color: #999;
+	font-size: $small-font-size;
+	margin-bottom: 0;
+	time {}
+}
+
+// Entry content  
+.entry-content {
+
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+		margin: 2.5rem 0 1.0rem;
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+		border: $thumbnail-border;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+		margin-bottom: 1.5rem;
+	}
+
+	.alignleft, img.alignleft { 
+		margin-right: 1.5em; 
+		display: inline; 
+		float: left; 
+	}
+
+	.alignright, img.alignright { 
+		margin-left: 1.5em; 
+		display: inline; 
+		float: right; 
+	}
+
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+	}
+			
+	video, object {
+		max-width: 100%;
+		height: auto;
+		}
+
+	pre, code, kbd, samp {
+		background: #ebebeb;
+		border: 1px solid #ccc;
+		font-family: $code-font-family;
+    	font-size: $code-font-size;
+    	word-break: break-all; /* webkit */
+  		word-wrap: break-word;
+  		white-space: pre;
+  		white-space: -moz-pre-wrap;
+  		white-space: pre-wrap;
+  		white-space: pre\9; /* IE7+ */
+	}
+
+	pre {
+		margin-bottom: 1.2rem;
+		padding: 10px;
+	}
+
+
+} 
+
+.wp-caption {
+	max-width: 100%;
+	background: #eee;
+	padding: 5px;
+	margin-bottom: 15px;
+
+	// Images inside wp-caption  
+	img {
+		max-width: 100%;
+		margin-bottom: 0;
+		width: 100%;
+	}
+
+	p.wp-caption-text {
+		font-size: 0.85em;
+		margin: 4px 0 0;
+		text-align: center;
+	}
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+textarea {
+		color: #666;
+	}
+
+.first-list {
+	margin-bottom: 0px;
+}
+
+
+table {
+    border: solid 1px $table-border-color;
+}
+
+
+@media screen and (max-width: $media-breakpoint) {
+
+	#content {
+		#inner-content {
+
+			padding: 5.0rem 0rem 1.5rem 0rem;
+
+			#main {
+				padding: 1rem 1rem 1rem;
+			}
+		}
+	}
+}
+
+
+/* # 6.0 Off-Canvas Content Styles 
+------------------------------------------------------ */
+
+.position-left {
+    width: $offcanvas-size;
+    transform: translateX(-350px);
+    -webkit-transform: translateX(-350px);
+}
+
+.position-right {
+    width: $offcanvas-size;
+    transform: translateX($offcanvas-size);
+    -webkit-transform: translateX($offcanvas-size);
+}
+
+​#off-canvas-top-wrapper .off-canvas.position-top {
+    height:$offcanvas-vertical-size;
+    -webkit-transform:translateY(400px);
+    transform:translateY(-400px);
+}
+
+#off-canvas-top-wrapper .off-canvas.position-top.is-open~.off-canvas-content {
+    -webkit-transform:translateY(400);
+    transform:translateY(400)
+}
+
+.position-bottom {
+    height:$offcanvas-vertical-size;
+    -webkit-transform:translateY(400px);
+    transform:translateY(400px);
+}
+
+.position-bottom.is-open~.off-canvas-content {
+    -webkit-transform:translateY(-400px);
+    transform:translateY(-400px)
+}
+
+.off-canvas-inner {
+    margin: $offcanvas-inner-margin;
+
+    .widget {
+        margin: 1rem ;
+        padding: 0;
+    }
+}
+
+.off-canvas.is-transition-overlap.is-open {
+    box-shadow: $offcanvas-shadow;
+}
+
+
+.close-button, .close-button.medium {
+    top: 5.5rem;
+    right: -0.5rem;
+    border: none !important;
+}
+
+
+.close-button:hover,
+.close-button:focus {
+    border: none !important;
+}
+
+#off-canvas-top button.close-button,
+#off-canvas-bottom button.close-button,
+{
+    background-color: transparent;
+    font-size: 1em;
+    top: 6.5rem;
+}
+
+#off-canvas-left button.close-button,
+#off-canvas-right button.close-button,
+{
+    background-color: transparent;
+}
+
+
+/* # 7.0 Gallery Image Styles 
+------------------------------------------------------ */ 
+
+.gallery-caption {
+	color: #707070;
+	color: rgba(51, 51, 51, 0.7);
+	display: block;
+	font-family: $body-font-family;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	padding: 0.5em 0;
+}
+
+
+
+/* # 8.0 Foundation Orbit Slider Styles 
+------------------------------------------------------ */
+
+.orbit-container {
+	border: solid 1px $black;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.orbit-bullets {
+    position: relative;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
+}
+
+.orbit-bullets button {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0.1rem;
+    background-color: #111;
+    border-radius: 50%; }
+
+.orbit-bullets button:hover {
+    background-color: #222;
+}
+
+.orbit-bullets button.is-active {
+    background-color: #428bca;
+}
+
+
+
+/* # 9.0 Comment Styles 
+------------------------------------------------------ */
+
+.comments-title {
+	font-size: 1.2em;
+}
+
+#comments {
+	.commentlist {
+		margin-left: 0px;
+	}
+}
+
+#respond {
+	ul {
+		margin-left: 0px;
+	}
+}
+
+.media-object img {
+    border: 1px solid #ddd;
+}
+
+.commentlist {
+	li {
+		position: relative;
+		clear: both;
+		overflow: hidden;
+		list-style-type: none;
+		margin-bottom: 1.5em;
+		padding: 0.7335em 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		ul.children {
+			margin: 0;
+
+			li {}
+
+			.comment {}
+			.alt {}
+			.odd {}
+			.even {}
+			.depth-1 {}           // Change number for different depth  
+			.byuser {}
+			.bypostauthor {}
+			.comment-author-admin {}
+
+		}
+	}
+
+	li[class*=depth-] {
+		margin-top: 1.1em;
+	}
+
+	li.depth-1 {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	li:not(.depth-1) {
+		margin-left: 10px;
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+
+	li.depth-2 {}
+	li.depth-3 {
+	}
+	li.depth-4 {}
+	li.depth-5 {}
+
+	// General comment classes  
+	.alt {}
+	.odd {
+	}
+	.even {
+	}
+	.parent {}
+	.comment {}
+	.children {}
+	.pingback {}
+	.bypostauthor { border-top: 2px solid $primary-color;}
+	.comment-author {}
+	.comment-author-admin {}
+	.thread-alt {}
+	.thread-odd {}
+	.thread-even {}
+
+	// vcard  
+	.vcard {
+		margin-left: 50px;
+
+		cite.fn {
+			font-weight: 700;
+			font-style: normal;
+
+			a.url {}
+
+		}
+
+		time {
+			float: right;
+
+			a {
+				color: #999;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+			}
+
+		}
+
+		img.photo {}
+
+		img.avatar {
+			position: absolute;
+			left: 10px;
+			padding: 2px;
+			border: 1px solid #cecece;
+			background: #fff;
+		}
+
+	} // end .commentlist .vcard  
+
+
+	// comment meta  
+	.comment-meta {
+
+		a {}
+
+	}
+
+	.commentmetadata {
+
+		a {}
+
+	}
+
+	// comment content  
+	.comment_content {
+
+		p {
+			margin: 0.7335em 0 1.5em;
+			font-size: 1em;
+			line-height: 1.5em;
+		}
+
+	} // end .commentlist .comment_content  
+
+	// comment reply link  
+	.comment-reply-link {
+		float: right;
+
+		&:hover,
+		&:focus {
+		
+		}
+
+	} // end .commentlist .comment-reply-link  
+
+} // end .commentlist  
+
+
+
+/* ## 9.1 Comment Form Styles 
+------------------------------------------------------ */
+
+.respond-form {
+	margin: 1.5em 10px;
+	padding-bottom: 2.2em;
+
+	form {
+		margin: 0.75em 0;
+
+		li {
+			list-style-type: none;
+			clear: both;
+			margin-bottom: 0.7335em;
+
+			label,
+			small {
+				display: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url],
+		textarea {
+			padding: 3px 6px;
+			background: #efefef;
+			border: 2px solid #cecece;
+			line-height: 1.5em;
+			border-radius: 3px;
+
+			&:focus {
+				background: #fff;
+			}
+
+			// form validation  
+			&:invalid {
+				outline: none;
+				border-color: #fbc2c4;
+				background-color: #f6e7eb;
+				-webkit-box-shadow: none;
+				   -moz-box-shadow: none;
+				    -ms-box-shadow: none;
+						box-shadow: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url] {
+			max-width: 400px;
+			min-width: 250px;
+		}
+
+		textarea {
+			resize: none;
+			width: 97.3%;
+			height: 150px;
+		}
+
+	}
+}
+
+// comment submit button  
+#submit {}
+
+button, input[type="button"], input[type="reset"], input[type="submit"], .button {
+  display: inline-block;
+  font-size: 13px;
+  background-color: transparent;
+  border: 1px solid #aaa;
+  color: #aaa;
+  padding: 6px 18px;
+  text-align: center;
+  line-height: 1.6;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 5px;
+  margin: 10px 8px 10px 0px;
+  cursor: pointer;
+  width: auto;
+}
+
+.button:hover, .button:focus, button:hover, button:focus {
+	background-color: transparent;
+    color: #999;
+}
+
+
+// comment form title  
+#comment-form-title {
+	margin: 0 0 1.1em;
+}
+
+// cancel comment reply link  
+#cancel-comment-reply {
+	a {}
+}
+
+// logged in comments  
+.comments-logged-in-as {}
+
+// allowed tags  
+#allowed_tags {
+	margin: 1.5em 10px 0.7335em 0;
+}
+
+// No comments  
+.nocomments {
+	margin: 0 20px 1.1em;
+}
+
+
+
+/* # 10.0 Sidebars & Asides Styles 
+------------------------------------------------------ */
+
+#searchsubmit {
+}
+
+.widgettitle {
+	font-size: 1.35rem;
+	color: $header-color;
+	border-bottom: 3px solid #e8e8e8;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+}
+
+.widget {
+	background-color: $sidebar-widget-background;
+	color: $body-font-color;
+	// box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	// border-radius: 3px;
+	padding: 1rem;
+	margin: 1rem;
+
+	&:first-child {
+	padding-top: $sidebar-first-widget-padding-top;
+	margin-top: $sidebar-first-widget-margin-top;
+	}
+
+	ul {
+		margin: 0;
+
+		li {
+    		text-decoration: none;
+    		list-style: none;
+    		padding: 4px;
+		}
+
+			&:first-child {}
+
+			&:last-child {}
+
+			a {}
+
+			// deep nesting  
+			ul {}
+	}
+}
+
+.sidebar, .custom-archive-sidebar {
+
+	color: $body-font-color;
+	padding: 1rem;
+
+	.menu > li {
+    	display: block;
+    	text-decoration: none;
+    	list-style: none;
+    	padding: 0px;
+    	border-bottom: solid 1px #e4e4e4;
+	}
+
+	.menu > li > a {
+    	display: block;
+    	padding: 0.8rem 0.1rem;
+    	line-height: 1;
+	}
+
+}
+
+ .custom-archive-sidebar {
+ 		margin-top: 65px;
+
+ 		ul {
+ 			margin-left: 0px;
+ 		}
+
+ 		ul > li {
+    		display: block;
+    		text-decoration: none;
+    		list-style: none;
+    		padding: 10px 0px;
+    		border-bottom: solid 1px #e4e4e4;
+		}
+ }	
+
+
+
+
+/* # 11.0 Footer Styles 
+------------------------------------------------------ */
+
+
+/* # 11.1 Footer Column Styles 
+------------------------------------------------------ */
+
+.footer-cols {
+
+	background-color: $footer-col-background;
+	color: $footer-col-color;
+	padding: 2rem;
+	border-top: solid 5px $footer-col-border-color;
+
+	.widgettitle {
+		font-size: 20px;
+		color: $footer-col-header-color;
+		border-bottom: 3px solid $footer-col-border-color;
+		margin-bottom: 15px;
+		padding-bottom: 10px;
+	}
+
+	ul {
+		margin-left: 0;
+	}
+
+	li {
+    	text-decoration: none;
+    	list-style: none;
+    	padding: 5px;
+    	border-bottom: solid 1px $footer-col-border-color;
+	}
+
+	.menu > li {
+	    display: block;
+    	text-decoration: none;
+    	list-style: none;
+    	padding: 5px;
+    	border-bottom: solid 1px $footer-col-border-color;
+	}
+
+	.menu > li > a {
+    padding: 0px;
+    line-height: 1.6;
+    }
+}
+
+
+
+/* # 11.2 Footer Styles 
+------------------------------------------------------ */
+
+.footer {
+	clear: both;
+	margin-top: 0em;
+	background-color: $footer-background;
+	padding: 2rem;
+	color: #5b6971;
+	border-top: solid 5px $footer-border-top;
+
+	p {
+		margin: 0;
+	}
+
+	.footer-left {
+		padding-top: 0;
+	}
+
+	.footer-right  {
+		float: right;
+	}
+
+	#footer-right ul {
+		list-style-type: none;
+		width: 135px;
+		margin: 0 auto 0.5rem;
+	}
+
+	#footer-right ul > li {
+		display: inline-block;
+		padding: 0;
+	}
+
+	#footer-right a:before {
+   		font-family: FontAwesome;
+   		content: "\25AE";
+   		font-size: 18px;
+   		color: #fff;
+   		background-color: #c6c6c6;
+   		display: inline-block;
+   		width: 30px;
+   		text-align: center;
+   		border-radius: 2px;
+	}
+
+	#footer-right a[href*="facebook.com"]:before {
+      	content: "\f09a";
+    }
+
+	#footer-right a[href*="dribbble.com"]:before {
+      	content: "\f17d";
+    }
+
+	#footer-right a[href*="twitter.com"]:before {
+      	content: "\f099";
+    }
+
+	#footer-right a[href*="mailto:"]:before {
+      	content: "\f0e0";
+    }
+
+    #footer-right a[href*="github.com"]:before,
+	#infobar-icons a[href*="github.com"]:before  {
+        content: "\f09b";
+    }
+
+    #footer-right a[href*="slack.com"]:before ,
+	#infobar-icons a[href*="slack.com"]:before  {
+        content: "\f198";
+    }
+
+    .footer #footer-right a[href*="youtube.com"]:before,
+	#infobar-icons a[href*="youtube.com"]:before  {
+    	content: "\f167";
+    }
+
+	.footer #footer-right a[href*="vimeo.com"]:before,
+	#infobar-icons a[href*="vimeo.com"]:before  {
+    	content: "\f27d"; }
+
+	.footer #footer-right a[href*="dropbox.com"]:before,
+	#infobar-icons a[href*="dropbox.com"]:before  {
+    	content: "\f16b"; }
+
+	.footer #footer-right a[href*="wordpress.org"]:before,
+	#infobar-icons a[href*="wordpress.org"]:before  {
+    	content: "\f19a"; }
+
+}
+
+@media screen and (max-width: $media-breakpoint) {
+
+	.footer {
+
+		.footer-right  {
+			float: none;
+		}
+
+		#footer-right ul {
+			list-style-type: none;
+			width: 135px;
+			margin: 0.5rem auto;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		.menu-footer-menu-container {
+			display: block;
+			margin: 0px auto;
+			width: 300px;
+		}
+
+		.footer-right {
+			float: none;
+		}
+	}
+
+	.footer-cols {
+		padding: 2rem 1rem;
+	}
+
+	.widget {
+    	padding: 1rem 0rem;
+    	margin: 1rem 0rem;
+	}
+
+	.footer-cols .column, .footer-cols .columns {
+ 	margin-bottom: 2em;
+	}
+
+}
+
+/* # 12.0: Home Page Featured Section Styles 
+------------------------------------------------------ */
+
+/* ## 12.1: Home Page - Slider Feature Styles 
+------------------------------------------------------ */
+
+#home-feature-section {
+  margin-top: -40px;
+}
+
+.slider-feature {
+	background-color: $white;
+}
+
+
+/* ## 12.2: Home Page - Hero Image Feature Styles 
+------------------------------------------------------ */
+
+.image-feature {
+	background-color: $white;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+	background-position: left center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+	background-size: cover;
+
+	.narrow-container {
+      top: 100px;
+      position: relative;
+    	color: $image-feature-color;
+    	padding: 35px 0px 20px;
+    	max-width: 600px;
+    	margin: 0 auto;
+	}
+
+	span {
+		font-family: $header-font-family;
+		font-size: 1.2rem;
+	}
+
+	.image-mask {
+    	background-color: $image-feature-mask;
+    	height: 430px;
+    	padding: 0px 10px;
+	}
+
+ 	h1 {
+    	color: $image-feature-header-color;
+    	margin-bottom: 0.5rem;
+	}
+
+}
+
+.image-mask {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+
+/* ## 12.3: Home Page - Icon Box Styles 
+------------------------------------------------------ */
+
+.icon-feature {
+	background-color: $body-background;
+	border-top: 5px solid $border-color;
+	padding: $icon-feature-padding;
+
+	h2 {
+    	color: $header-color;
+    	margin-bottom: 0.5rem;
+	}
+
+	.icon-box {
+    	color: $icon-box-color;
+    	box-sizing: border-box;
+    	text-align: center;
+    	padding-bottom: 1.0rem;
+	}
+
+	.icon-font {
+	    position: relative;
+	    margin: 0 auto 0.9em auto;
+	    width: 100px;
+	    height: 100px;
+	    line-height: 100px;
+    	text-align:center;
+    	vertical-align:middle;
+    	color: $primary-color;
+    	background-color: $icon-font-background;
+    	border: $icon-font-border;
+    	border-radius: 100%;
+    	display:inline-block;
+	}
+
+	.icon-font > i {
+		font-size: 50px;
+		line-height: inherit;
+	}
+
+}
+
+
+/* ## 12.4: Home Page - Content Feature Styles 
+------------------------------------------------------ */
+
+.content-feature {
+	background-color: $body-background;
+	padding: 3.5rem 1.0rem 3.0rem;
+  border-top: solid 5px $border-color;
+
+	h1 {
+		line-height: 1.6;
+		color: $header-color;
+	}
+
+	p:first-child {
+    	margin-top: 0;
+	}
+
+	img {
+    	max-width: 100%;
+    	height: auto;
+    	border: solid 5px #fefefe;
+    	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    	margin-bottom: 1.5rem;
+	}
+
+	ul {
+  		list-style-position: inside;
+	}
+
+ 	ul > li {
+    	text-decoration: none;
+    	list-style: disc inside none;
+    	padding: 3px 10px 3px;
+	}
+
+	.narrow-container {
+    	color: #999;
+    	max-width: 700px;
+    	margin: 0 auto;
+	}
+}
+
+
+/* ## 12.5: Home Page - Call-to-Action Feature Styles 
+------------------------------------------------------ */
+
+.cta-feature {
+	background-color: $cta-feature-background;
+	color: $cta-feature-color;
+	border-top: solid 5px $cta-feature-border;
+	padding: 3.5rem 1.0rem 3.0rem;
+
+	h1, h2 {
+		color: $cta-feature-header-color;
+	}
+
+	h3 {
+		color: $cta-feature-sub-header-color;
+	}
+
+	ul > li {
+		list-style: circle inside none;
+		padding-left: 3px;
+	}    
+
+	hr {
+    	border: solid $cta-feature-hr-color;
+    	border-width: 1px 0 0;
+    	clear: both;
+    	margin: 1.0rem auto 2.0rem;
+    	height: 0;
+    	max-width: $cta-feature-hr-width;
+    	display: block;
+	}
+
+	button, input[type="button"], input[type="reset"], input[type="submit"], .button {
+  		border: 1px solid $cta-feature-button-border;
+  		color: transparent;
+	}
+
+}
+
+
+/* ## 12.6: Home Page - Parallax Feature Styles 
+------------------------------------------------------ */
+
+.parallax-feature, .parallax-custom {
+    border-top: 5px solid $border-color;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    .image-mask {
+        background-color: $parallax-image-mask;
+        padding: 2.5rem 1.0rem 2.5rem;
+        height: 100%;
+    }
+}
+
+.parallax-inner-feature {
+  
+    .image-mask {
+      background-color: transparent;
+      min-height: 0;
+  }
+}
+
+.parallax-content {
+    color: $parallax-font-color;
+	position: relative;
+	background-color: transparent;
+
+	hr {
+    	border: solid #777;
+    	border-width: 1px 0 0;
+    	margin: 1.0rem auto 3.0rem;
+    	max-width: 600px;
+	}
+
+	p {
+		margin-bottom: 1.5em;
+	}
+
+	h1, h2, h3 {
+		color: $parallax-header-color;
+    	margin-bottom: 0.5rem;
+	}
+
+    .button {
+		clear: both;
+		display: block;
+		font-size: 16px;
+		background-color: transparent;
+		border: 1px solid #888 !important;
+		color: #666 !important;
+		padding: 7px 19px;
+		line-height: 1.42857;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		border-radius: 4px;
+		margin: 25px auto 10px auto;
+		cursor: pointer;
+		width: 200px;
+	}
+
+	.narrow-container {
+    	max-width: 700px;
+    	margin: 0 auto;
+	}
+
+	.fa {
+		padding-right: 5px;
+	}
+
+}
+
+
+/* # 13.0: Portfolio Page Styles 
+------------------------------------------------------ */   
+
+.portfolio-box {
+	padding-bottom: 2.0rem;
+}
+
+.card-section .article-header {
+	margin-bottom: 0;
+}
+
+
+/* # 14.0: Foundation Styles 
+------------------------------------------------------ */
+
+.accordion-title {
+    display: block;
+    padding: 1.25rem 1rem;
+    line-height: 1;
+    font-size: inherit;
+    color: #428bca;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.tabs-content {
+    border: 1px solid #e6e6e6;
+    border-top: 0;
+    background: #fefefe;
+    color: $body-font-color;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+select {
+    color: $body-font-color;
+}
+
+.sticky.is-anchored {
+    position: fixed;
+    right: auto;
+    left: auto;
+}
+
+.sticky, .sticky-container {
+    position: fixed;
+}
+
+.admin-bar .sticky.is-stuck.is-at-top,
+.admin-bar .sticky.is-anchored {
+    top: 32px !important;
+}
+
+@media screen and (max-width: $media-breakpoint) {
+
+.admin-bar .sticky.is-stuck.is-at-top {
+    top: 0px !important;
+}
+
+.admin-bar .sticky.is-anchored {
+    top: 40px !important;
+}
+
+}
+
+
+/* # 15.0: Accessibility 
+------------------------------------------------------ */
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: $content-gray;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
+
+/* # 16.0: Multisite Styles
+------------------------------------------------------ */
+
+#content #mu-signup-form {
+  max-width: 650px;
+  margin: 100px auto 220px;
+}
+
+#content #mu-signup-form .mu_register input[type="submit"],
+#content #mu-signup-form .mu_register #blog_title,
+#content #mu-signup-form .mu_register #user_email,
+#content #mu-signup-form .mu_register #blogname,
+#content #mu-signup-form .mu_register #user_name {
+    width: 100%;
+    font-size: inherit;
+    margin: 5px 0;
+}
+
+#content #mu-signup-form .mu_register input[type="submit"] {
+   width: auto;
+}
+
+
+
+/* # 17.0: Plugin Styles 
+------------------------------------------------------ */
+
+/* ## 17.1: Mailchimp Forms 
+------------------------------------------------------ */
+
+.mc4wp-form-fields {
+	margin-top: 10px;
+	padding-left: 0px;
+
+	input[type=text],
+	input[type=email],
+	input[type=url],
+	textarea {
+		color: #777;
+		padding: 3px 6px;
+		background: #efefef;
+		line-height: 1.5em;
+		border-radius: 3px;
+		max-width: 450px;
+	}
+				
+}
+
+/* ## 17.2: Gravity Forms 
+------------------------------------------------------ */
+
+.gform_body ul {
+    list-style: none outside none;
+    margin: 0;
+}
+
+/* ## 17.3: BBPress 
+------------------------------------------------------ */
+
+.bbp-breadcrumb {
+  font-size: 14px !important;
+}
+
+.bbp-forums {
+  font-size: 16px !important;
+}
+
+.bbp-forum-content {
+  font-size: 14px !important;
+}
+
+#bbpress-forums .subscription-toggle {
+	float: right;
+}
+
+#bbpress-forums div.bbp-the-content-wrapper input.button {
+	color: #777 !important;
+	border-color: #ccc;
+	background-color: transparent;
+}
+
+
+/* ## 17.4: EDD Downloads Featured Info 
+------------------------------------------------------ */
+
+.entry-content .edd-payment-icons img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 1.5rem;
+}
+
+.edd-download-features {
+	margin-top: 10px;
+}
+
+.edd-download-features ul {
+	margin-left: 0;	
+}
+
+.edd-download-features ul > li {
+	list-style-type: none;
+	color: #444;
+}
+
+.edd-download-features .button {
+	width: 100%;
+}
+
+.edd-download-info {
+	margin-top: 10px;
+}
+
+.edd-download-features h4:first-child {
+	margin-top: 0.5rem;
+}
+
+.edd-download-feature-list {
+	list-style-position: inside;
+	margin-left: 1.25rem;
+	list-style-type: disc;
+}
+
+.edd-download-feature-list h4 {
+	margin-top: 3.0rem;
+}
+
+
+/* ## 17.4: Easy Digital Downloads Styles
+------------------------------------------------------ */
+
+.entry-content .edd-payment-icons img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+
+
