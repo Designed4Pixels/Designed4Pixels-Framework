@@ -101,17 +101,20 @@
 					 $icon-font-background: $medium-black,
 					 $icon-font-border: 1px solid $black,
 					 $image-feature-mask: rgba(0, 0, 0, 0.6),
-					 $image-feature-color: #bbb,
+					 $image-feature-color: #aaa,
 					 $image-feature-header-color: #fff,
 					 $parallax-image-mask: rgba(0, 0, 0, 0.85),
+					 $parallax-inner-image-mask: rgba(0, 0, 0, 0),
 					 $parallax-header-color: #ddd,
 					 $parallax-font-color: #bbb,
 					 $parallax-border-color: $black,
 					 $parallax-hr-color: #444,
 					 $cta-feature-background: #779ECB,
+					 $cta-feature-border: darken( #779ECB, 10% ),
 					 $cta-feature-color: #eee,
 					 $cta-feature-header-color: $white,
 					 $cta-feature-sub-header-color: #999,
+					 $cta-feature-hr-color: darken( #779ECB, 10% ),
 					 $footer-col-background: $medium-black,
 					 $footer-col-border-color: #242424,
 					 $footer-col-header-color: #888,
@@ -303,6 +306,10 @@
     		background-color: $parallax-image-mask;
 		}
 
+		[id^="parallax-inner-feature-"] .image-mask {
+      		background-color: $parallax-inner-image-mask;
+      	}
+
 		.parallax-feature {
     		border-top: 5px solid $parallax-border-color;
 		}
@@ -331,7 +338,7 @@
 		}
 
 		.image-feature .narrow-container {
-    		color: $body-font-color;
+    		color: $image-feature-color;
 		}
 
 		.image-feature .image-mask {
@@ -390,8 +397,13 @@
     		background-color: $footer-icon-color;
 		}
 
+
+		// Content Feature Settings
+		// -------------------------------
+
 		.content-feature {
 			background-color: $body-background;
+			border-top: solid 5px #d8d8d8;
 		}
 
 

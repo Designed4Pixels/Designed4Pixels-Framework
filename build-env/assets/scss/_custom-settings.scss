@@ -3,7 +3,7 @@
 //
 //  Table of Contents:
 //
-//	1.0 Color
+//	1.0 Colors
 //		1.1 Accent Colors
 //	2.0 Breakpoints
 //	3.0 Base Typography
@@ -22,8 +22,8 @@
 
 
 
-// 1.0 Color
-// ---------
+// 1.0 Colors
+// ----------
 
 $content-gray: #f3f4f5;
 $true-black: #000;
@@ -135,6 +135,7 @@ $icon-font-border: #e8e8e8;
 // ---------------------
 
 $parallax-image-mask: rgba(255, 255, 255, 0.7);
+$parallax-inner-image-mask: rgba(255, 255, 255, 0);
 $parallax-header-color: #444;
 $parallax-font-color: #777;
 
@@ -145,7 +146,7 @@ $parallax-font-color: #777;
 $cta-feature-background: #fefefe;
 $cta-feature-color: #c6c6c6; 
 $cta-feature-border: #f1f1f1;
-$cta-feature-header-color: $white;
+$cta-feature-header-color: #666;
 $cta-feature-sub-header-color: #999;
 $cta-feature-hr-color: darken( $cta-feature-background, 10% );
 $cta-feature-hr-width: 600px;

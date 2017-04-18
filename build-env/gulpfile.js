@@ -118,10 +118,6 @@ gulp.task('theme:js', function() {
       // Grab your custom scripts
   		'./assets/js/*.js' 
   ])
-    //.pipe(plumber())
-    //.pipe(jshint())
-    //.pipe(jshint.reporter('jshint-stylish'))
-    //.pipe(concat('scripts.js'))
     .pipe(gulp.dest('../theme-src/designed4pixels/assets/js/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
