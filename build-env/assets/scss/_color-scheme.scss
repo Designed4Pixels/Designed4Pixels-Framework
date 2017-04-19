@@ -11,42 +11,42 @@ This stylesheet is used to set-up the Designed4Pixels Accent Color & Color Schem
 /* Color: Pastel Blue (Default) */
 
 .color-one {
-	@include accent-color( $media-breakpoint, $color: $accent-color-one );
+	@include accent-color( $media-breakpoint, $color: $accent-color-one, $light-color: $accent-light-color-one );
 }
 
 
 /* Color: Blue */
 
 .color-two {
-	@include accent-color( $media-breakpoint, $color: $accent-color-two );
+	@include accent-color( $media-breakpoint, $color: $accent-color-two, $light-color: $accent-light-color-two );
 }
 
 
 /* Color: Red */
 
 .color-three {
-	@include accent-color( $media-breakpoint, $color: $accent-color-three );
+	@include accent-color( $media-breakpoint, $color: $accent-color-three, $light-color: $accent-light-color-three );
 }
 
 
 /* Color: Green */
 
 .color-four {
-	@include accent-color( $media-breakpoint, $color: $accent-color-four );
+	@include accent-color( $media-breakpoint, $color: $accent-color-four, $light-color: $accent-light-color-four );
 }
 
 
 /* Color: Violet */
 
 .color-five {
-	@include accent-color( $media-breakpoint, $color: $accent-color-five );
+	@include accent-color( $media-breakpoint, $color: $accent-color-five, $light-color: $accent-light-color-five );
 }
 
 
 /* Color: Gold */
 
 .color-six {
-	@include accent-color( $media-breakpoint, $color: $accent-color-six );
+	@include accent-color( $media-breakpoint, $color: $accent-color-six, $light-color: $accent-light-color-six );
 }
 
 

@@ -4,7 +4,7 @@
 // ******************************************************************
 
 
-@mixin accent-color( $media-breakpoint: 64em, $color: #779ecb ) {
+@mixin accent-color( $media-breakpoint: 64em, $color: #779ecb, $light-color: #779ecb ) {
 
     	.accent-color { 
     		color: $color !important;
@@ -56,6 +56,17 @@
 
 		blockquote {
     		border-left: 2px solid $color;
+		}
+
+		.cta-feature {
+  			background-color: $light-color;
+  			border-top: solid 5px $color;
+		}
+
+		.cta-feature hr {
+  			border-color: $color;
+      		border-style: solid;
+    		border-width: 1px 0 0;
 		}
 
 
@@ -402,9 +413,9 @@
 		// -------------------------------
 
 		.content-feature {
-			background-color: $body-background;
-			border-top: solid 5px #d8d8d8;
-		}
+		  	background-color: $body-background;
+		  	border-top: solid 5px #d8d8d8;
+	    }
 
 
 		// Call-to-Action Feature Settings
@@ -412,8 +423,8 @@
 
 		.cta-feature {
 			color: $cta-feature-color;
-			background-color: $cta-feature-background;
-			border-top: solid 5px $cta-feature-border;
+		//	background-color: $cta-feature-background;
+		//	border-top: solid 5px $cta-feature-border;
 		}
 
 		.cta-feature h1 {
@@ -424,9 +435,9 @@
     		color: $cta-feature-sub-header-color;
 		}
 
-		.cta-feature hr {
-    		border: solid 1px $cta-feature-hr-color;
-		}
+		// .cta-feature hr {
+    	// 	border: solid 1px $cta-feature-hr-color;
+		// }
 
 
 		// Plugin Customization Settings

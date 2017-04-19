@@ -42,12 +42,21 @@ $site-desc-color: #999999;
 // 1.1 Accent Colors
 // -----------------
 
-$accent-color-one: #779ecb;						// Pastel Blue
-$accent-color-two: #428bca; 					// Blue
-$accent-color-three: #dd5454;					// Red
-$accent-color-four: #59a364;					// Green
-$accent-color-five: #9d58e2;					// Violet
-$accent-color-six: darken( #a99e7d, 10% ); 		// Gold
+$accent-color-one: #779ecb;				// Pastel Blue
+$accent-color-two: #428bca; 			// Blue
+$accent-color-three: #dd5454;			// Red
+$accent-color-four: #59a364;			// Green
+$accent-color-five: #9d58e2;			// Violet
+$accent-color-six: #928661; 			// Gold
+
+// Dark Accent Color Settings
+
+$accent-light-color-one: lighten($accent-color-one, 15%);		// Pastel Blue
+$accent-light-color-two: lighten($accent-color-two, 15%); 		// Blue
+$accent-light-color-three: lighten($accent-color-three, 15%);	// Red
+$accent-light-color-four: lighten($accent-color-four, 15%);		// Green
+$accent-light-color-five: lighten($accent-color-five, 15%);		// Violet
+$accent-light-color-six: lighten($accent-color-six, 15%); 		// Gold
 
 
 // 2.0 Breakpoints

@@ -12,9 +12,14 @@
 	var $style = $( '#custom-color-scheme' ),
 		api = wp.customize;
 
-	if ( ! $style.length ) {
-		$style = $( 'head' ).append( '<style type="text/css" id="custom-color-scheme" />' )
-		                    .find( '#custom-color-scheme' );
+	function hex2rgba(hex,opacity){
+ 		hex = hex.replace('#','');
+ 		r = parseInt(hex.substring(0,2), 16);
+ 		g = parseInt(hex.substring(2,4), 16);
+ 		b = parseInt(hex.substring(4,6), 16);
+
+ 		result = 'rgba('+r+','+g+','+b+','+opacity/100+')';
+ 		return result;
 	}
 
 
@@ -97,11 +102,18 @@
 			// Update custom color CSS.
 			var style = $( '#custom-accent-color' ),
 				accent_color = style.data( 'accent-color' ),
+				accent_color_light = style.data( 'accent-color-light' ),
+				rgba = hex2rgba( to, 50 ),
 				css = style.html();
 
 			// Equivalent to css.replaceAll, with hue followed by comma to prevent values with units from being changed.
 			css = css.split( accent_color ).join( to );
+
+			// Equivalent to css.replaceAll, with hue followed by comma to prevent values with units from being changed.
+			css = css.split( accent_color_light ).join( rgba );
+
 			style.html( css ).data( 'accent-color', to );
+			style.html( css ).data( 'accent-color-light', rgba );
 		});
 	});
 
