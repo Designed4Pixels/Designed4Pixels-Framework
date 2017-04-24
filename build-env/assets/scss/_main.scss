@@ -34,6 +34,7 @@
 	12.4 Content Feature Styles
 	12.5 Call-to-Action Feature Styles
 	12.6 Parallax Feature Styles
+  12.7 Show Posts Feature Styles
 13.0 Portfolio Page Styles
 14.0 Foundation Styles
 15.0 Accessibility
@@ -1793,6 +1794,24 @@ div[id^="parallax-inner-feature-"] {
 	.fa {
 		padding-right: 5px;
 	}
+
+}
+
+
+/* ## 12.7: Home Page - Show Posts Feature Styles 
+------------------------------------------------------ */
+
+.show-posts-feature {
+  background-color: $body-background;
+  padding: 3.5rem 1.0rem 3.0rem;
+  border-top: solid 5px $border-color;
+
+  h1, h2 {
+    line-height: 1.6;
+    padding-left: 12px;
+    margin-bottom: 1.5rem;
+    color: $header-color;
+  }
 
 }
 
