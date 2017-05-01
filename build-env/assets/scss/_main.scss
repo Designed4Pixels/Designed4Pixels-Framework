@@ -294,7 +294,6 @@ h6, .h6 {
 
 .logo-bar {
   	background-color: $logobar-background;
-  	border-top: solid 1px $logobar-border-color;
   	padding: $logobar-padding;
     box-shadow: $logobar-shadow;
 
@@ -688,7 +687,7 @@ button.menu-icon, button.menu-icon:hover, button.menu-icon:focus {
 #content {
 	#inner-content {
 
-		padding: 7rem 0rem 4rem 0rem;
+		padding: 5.2rem 0rem 4rem 0rem;
 		background-color: $body-background;
 
 		#main {
@@ -887,29 +886,51 @@ table {
     }
 }
 
+#off-canvas-top .off-canvas-inner {
+    margin: 20px;
+}
+
 .off-canvas.is-transition-overlap.is-open {
     box-shadow: $offcanvas-shadow;
 }
 
 
-.close-button, .close-button.medium {
-    top: 6.0rem;
-    right: -0.5rem;
+#off-canvas-left .close-button, #off-canvas-left .close-button.medium {
+    top: 30px;
+    right: 0px;
+    left: 0px;
     border: none !important;
+    position: relative;
 }
 
+#off-canvas-right .close-button, #off-canvas-right .close-button.medium {
+    top: 30px;
+    right: 0;
+    left: 268px;
+    border: none !important;
+    position: relative;
+}
 
 .close-button:hover,
 .close-button:focus {
     border: none !important;
 }
 
-#off-canvas-top button.close-button,
-#off-canvas-bottom button.close-button,
+#off-canvas-top button.close-button
 {
     background-color: transparent;
+    border: none !important;
     font-size: 1em;
-    top: 6.5rem;
+    top: 4.5rem;
+    right: 120px;
+}
+
+#off-canvas-bottom button.close-button
+{
+    background-color: transparent;
+    border: none !important;
+    font-size: 1em;
+    top: 0;
 }
 
 #off-canvas-left button.close-button,
@@ -1556,7 +1577,9 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 
 	.narrow-container {
       top: 100px;
-      position: relative;
+      left: 0;
+      right: 0;
+      position: absolute;
     	color: $image-feature-color;
     	padding: 35px 0px 20px;
     	max-width: 600px;
@@ -1570,7 +1593,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 
 	.image-mask {
     	background-color: $image-feature-mask;
-    	height: 430px;
+//    	height: 430px;
     	padding: 0px 10px;
 	}
 
@@ -1581,7 +1604,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 	}
 
   p {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
   }
 
 }
@@ -1644,8 +1667,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 	padding: 3.5rem 1.0rem 3.0rem;
   border-top: solid 5px $border-color;
 
-	h1, h2 {
-		line-height: 1.6;
+	h1, h2, h3 {
+		line-height: 1.2;
     margin-bottom: 0.5rem;
 		color: $header-color;
 	}
@@ -1677,6 +1700,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
     	max-width: 700px;
     	margin: 0 auto;
 	}
+
+  .fa {
+    padding-right: 5px;
+  }
 }
 
 
@@ -1691,6 +1718,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 
 	h1, h2 {
 		color: $cta-feature-header-color;
+    line-height: 1.2;
 	}
 
 	h3 {
@@ -1728,6 +1756,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
     border-top: 5px solid $border-color;
     background-repeat: no-repeat;
     background-position: top center;
+    background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1735,7 +1764,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 
     .image-mask {
         background-color: $parallax-image-mask;
-        padding: 2.5rem 1.0rem 2.5rem;
+        padding: 1.0rem 0;
         height: 100%;
     }
 }
@@ -1744,6 +1773,7 @@ div[id^="parallax-inner-feature-"] {
   
     .image-mask {
       background-color: $parallax-inner-image-mask;
+      padding: 2.5rem 1.0rem 2.5rem;
   }
 }
 
@@ -1798,12 +1828,24 @@ div[id^="parallax-inner-feature-"] {
 }
 
 
+@media screen and (max-width: $media-breakpoint) {
+
+    .parallax-feature, .parallax-custom {
+        background-attachment: fixed;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
+
+
 /* ## 12.7: Home Page - Show Posts Feature Styles 
 ------------------------------------------------------ */
 
 .show-posts-feature {
   background-color: $body-background;
-  padding: 3.5rem 1.0rem 3.0rem;
+  padding: 2.5rem 1.0rem 1.5rem;
   border-top: solid 5px $border-color;
 
   h1, h2 {
@@ -1812,6 +1854,18 @@ div[id^="parallax-inner-feature-"] {
     margin-bottom: 1.5rem;
     color: $header-color;
   }
+
+  .excerpt-read-more {
+      display: block;
+  }
+
+  .card-section .article-header {
+      margin-bottom: 0.7rem;
+  }
+
+  .card-section .entry-content p {
+      color: #777;
+  }  
 
 }
 
