@@ -120,12 +120,21 @@
 					 $parallax-font-color: #bbb,
 					 $parallax-border-color: $black,
 					 $parallax-hr-color: #444,
+					 $content-feature-background-color: $content-gray,
+					 $content-feature-border-color: #e2e2e2,
 					 $cta-feature-background: #779ECB,
 					 $cta-feature-border: darken( #779ECB, 10% ),
 					 $cta-feature-color: #eee,
 					 $cta-feature-header-color: $white,
 					 $cta-feature-sub-header-color: #999,
 					 $cta-feature-hr-color: darken( #779ECB, 10% ),
+					 $show-posts-feature-background: $content-gray,
+					 $show-posts-feature-border-color: #e2e2e2,
+					 $show-posts-header-color: #666,
+					 $show-posts-card-border-color:	#d8d8d8,
+					 $show-posts-card-background-color: #fefefe,
+					 $show-posts-card-header-color: #666,
+					 $show-posts-card-text-color: #c6c6c6,
 					 $footer-col-background: $medium-black,
 					 $footer-col-border-color: #242424,
 					 $footer-col-header-color: #888,
@@ -413,8 +422,8 @@
 		// -------------------------------
 
 		.content-feature {
-		  	background-color: $body-background;
-		  	border-top: solid 5px #d8d8d8;
+		  	background-color: $content-feature-background-color;
+		  	border-top: solid 5px $content-feature-border-color;
 	    }
 
 
@@ -423,8 +432,6 @@
 
 		.cta-feature {
 			color: $cta-feature-color;
-		//	background-color: $cta-feature-background;
-		//	border-top: solid 5px $cta-feature-border;
 		}
 
 		.cta-feature h1 {
@@ -435,9 +442,30 @@
     		color: $cta-feature-sub-header-color;
 		}
 
-		// .cta-feature hr {
-    	// 	border: solid 1px $cta-feature-hr-color;
-		// }
+		// Show Posts Feature Settings
+		// ---------------------------
+
+		.show-posts-feature {
+          	background-color: $show-posts-feature-background;
+		  	border-top: solid 5px $show-posts-feature-border-color;          	
+    	}
+
+		.show-posts-feature .archive-header > h2 {
+          	color: $show-posts-header-color;
+    	}
+
+		.show-posts-feature .card {
+          	border: 1px solid $show-posts-card-border-color;
+          	background: $show-posts-card-background-color;
+    	}
+
+    	.show-posts-feature .card-section .title a {
+          	color: $show-posts-card-header-color;
+    	}
+
+    	.show-posts-feature .card-section .entry-content {
+          	color: $show-posts-card-text-color;
+    	}
 
 
 		// Plugin Customization Settings
