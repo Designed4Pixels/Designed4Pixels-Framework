@@ -69,6 +69,11 @@
     		border-width: 1px 0 0;
 		}
 
+		.woocommerce div.product p.price,
+		.woocommerce div.product span.price {
+    		color: $color;
+		}
+
 
     	@media screen and (max-width: $media-breakpoint) {
 
@@ -124,7 +129,7 @@
 					 $content-feature-border-color: #e2e2e2,
 					 $cta-feature-background: #779ECB,
 					 $cta-feature-border: darken( #779ECB, 10% ),
-					 $cta-feature-color: #eee,
+					 $cta-feature-color: $white,
 					 $cta-feature-header-color: $white,
 					 $cta-feature-sub-header-color: #999,
 					 $cta-feature-hr-color: darken( #779ECB, 10% ),
