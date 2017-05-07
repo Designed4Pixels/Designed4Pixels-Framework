@@ -15,17 +15,20 @@ jQuery(document).ready(function() {
 	// Adds Flex Video to YouTube and Vimeo Embeds
 	jQuery('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').wrap("<div class='flex-video'/>");
 
+});
+
+jQuery(window).on('load', function() {
 
 	// The functions below take into account Height differences due to WP Admin Bar, Info Bar, and Nav Bar.
 	// Start by assigning variable 'index' with the Height of the Info Bar.
-	var index = jQuery( ".upper-nav-bar" ).height();
+	index = jQuery( ".upper-nav-bar" ).height();
 
 	// Add Height of Info Bar to Inner content Padding.
 	jQuery( "#inner-content" ).css( "padding-top", "+=" + index );
 
-	// If WP Admin Bar is displayed add 32px on to the Height of the Info Bar.
+	// If WP Admin Bar is displayed add 35px on to the Height of the Info Bar.
 	if ( init_settings.show_admin_bar ) {
-		index = index + 32;
+		index = index + 35;
 	}
 
 	// Applies Height of WP Admin Bar and Info Bar to 'Off Canvas' containers and Home Page Image Feature.
@@ -37,7 +40,7 @@ jQuery(document).ready(function() {
     index = index + jQuery( ".lower-nav-bar" ).height();
 
     // Applies Height of WP Admin Bar, Info Bar, and Logo Bar to content.
-    jQuery( ".image-mask" ).css( "height", "+=" + index);
+    jQuery( "#home-feature-section-1 .image-feature .image-mask" ).css( "height", "+=" + index);
     jQuery( "#off-canvas-top .off-canvas-inner" ).css( "margin-top", "+=" + index );
 
 
