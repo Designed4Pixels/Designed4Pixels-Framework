@@ -337,6 +337,7 @@
 
 		.parallax-feature {
     		border-top: 5px solid $parallax-border-color;
+    		border-bottom: 5px solid $parallax-border-color;
 		}
 
 		.parallax-content {
@@ -373,6 +374,7 @@
 		.icon-feature {
 			background-color: $black;
 			border-top: 5px solid $medium-black;
+			border-bottom: 5px solid $medium-black;
 		}
 
 		.icon-feature .icon-font {
@@ -429,6 +431,7 @@
 		.content-feature {
 		  	background-color: $content-feature-background-color;
 		  	border-top: solid 5px $content-feature-border-color;
+		  	border-bottom: solid 5px $content-feature-border-color;
 	    }
 
 
@@ -452,7 +455,8 @@
 
 		.show-posts-feature {
           	background-color: $show-posts-feature-background;
-		  	border-top: solid 5px $show-posts-feature-border-color;          	
+		  	border-top: solid 5px $show-posts-feature-border-color;
+		  	border-bottom: solid 5px $show-posts-feature-border-color;		  	          	
     	}
 
 		.show-posts-feature .archive-header > h2 {
