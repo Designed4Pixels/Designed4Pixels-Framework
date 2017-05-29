@@ -8,11 +8,13 @@
  */
 
 
-( function() {
+( function( $ ) {
 
 	var cssTemplate = wp.template( 'd4p-color-scheme' ),
 		api = wp.customize,
 		colorSettings = _.keys( colorScheme );
+		themeSettings = _.keys( defaultSettings );
+
 
 	api.controlConstructor.select = api.Control.extend( {
 		ready: function() {
@@ -38,10 +40,11 @@
 		function updateCSS() {
 
 			var css,
-				colors = _.object( colorScheme );
+				colors = _.object( defaultSettings );
+
 
 			// Merge in Color Scheme Overrides.
-			_.each( colorSettings, function( setting ) {
+			_.each( themeSettings, function( setting ) {
 				colors[ setting ] = api( setting )();
 			});
 
@@ -52,7 +55,7 @@
 
 
 		// Update the CSS whenever a Color Setting is changed.
-		_.each( colorSettings, function( setting ) {
+		_.each( themeSettings, function( setting ) {
 			api( setting, function( setting ) {
 			setting.bind( updateCSS );
 			} );
@@ -99,8 +102,8 @@
 				});
 			});
 
-/* ------ End of Controls ------ */
+			/* ------ End of Controls ------ */
 
-});
+			});
 
 } )( jQuery );

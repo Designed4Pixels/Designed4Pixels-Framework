@@ -131,5 +131,24 @@
 			}  
 		} );
 	} );
+
+	/* ------------ This Section Updates Custom Google Font Settings -------------- */
+
+	//* Update Site Title Font
+	wp.customize( 'd4p_header_title_custom_font', function( value ) {
+		value.bind( function( newval ) {
+			$("head").append("<link href='https://fonts.googleapis.com/css?family=" + newval + "' rel='stylesheet' type='text/css'>");
+			$('.site-title').css( 'font-family', newval );
+		} );
+	} );
+
+	//* Update Site Description Font
+	wp.customize( 'd4p_header_description_custom_font', function( value ) {
+		value.bind( function( newval ) {
+			$("head").append("<link href='https://fonts.googleapis.com/css?family=" + newval + "' rel='stylesheet' type='text/css'>");
+			$('.site-description').css( 'font-family', newval );
+		} );
+	} );
+
 	
 } )( jQuery );
