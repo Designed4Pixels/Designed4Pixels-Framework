@@ -831,7 +831,7 @@ button.menu-icon, button.menu-icon:hover, button.menu-icon:focus {
 
 input[type=text],
 input[type=email],
-input[type=password]
+input[type=password],
 input[type=url]{
 		color: #666;
     max-width: 450px;
@@ -889,14 +889,7 @@ table {
 }
 
 
-#off-canvas-left .close-button, #off-canvas-left .close-button.medium {
-    top: 30px;
-    right: 0px;
-    left: 0px;
-    border: none !important;
-    position: relative;
-}
-
+#off-canvas-left .close-button, #off-canvas-left .close-button.medium,
 #off-canvas-right .close-button, #off-canvas-right .close-button.medium {
     top: 30px;
     right: 0;
@@ -905,13 +898,16 @@ table {
     position: relative;
 }
 
-.close-button {
-    color: #c6c6c6;
+
+.close-button,
+.close-button:focus {
+    color: $offcanvas-close-button-color;
+    border: none !important;
+    outline: none;
 }
 
-.close-button:hover,
-.close-button:focus {
-    border: none !important;
+.close-button:hover {
+    color: darken( $offcanvas-close-button-color, 15% );
 }
 
 #off-canvas-top button.close-button
@@ -1526,11 +1522,6 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
   margin-top: -40px;
 }
 
-.slider-feature {
-	background-color: $white;
-}
-
-
 /* ## 12.2: Home Page - Hero Image Feature Styles 
 ------------------------------------------------------ */
 
@@ -1591,7 +1582,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 .icon-feature {
     background-color: $body-background;
     border-top: 5px solid $border-color;
-    border-bottom: 5px solid $border-color;
+    border-bottom: 5px solid  $border-color;
     padding: $icon-feature-padding;
 
     h2 {
@@ -1635,8 +1626,6 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 .content-feature {
 	background-color: $body-background;
 	padding: 3.5rem 1.0rem 3.0rem;
-  border-top: solid 5px $border-color;
-  border-bottom: solid 5px $border-color;
 
 	h1, h2, h3 {
 		line-height: 1.2;
@@ -1685,7 +1674,6 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 	background-color: $cta-feature-background;
 	color: $cta-feature-color;
 	border-top: solid 5px $cta-feature-border;
-  border-bottom: solid 5px $cta-feature-border;
 	padding: 3.5rem 1.0rem 3.0rem;
 
 	h1, h2 {
@@ -1726,7 +1714,6 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 
 .parallax-feature, .parallax-custom {
     border-top: 5px solid $border-color;
-    border-bottom: 5px solid $border-color;
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
@@ -1821,7 +1808,6 @@ div[id^="parallax-inner-feature-"] {
   background-color: $body-background;
   padding: 2.5rem 1.0rem 1.5rem;
   border-top: solid 5px $border-color;
-  border-bottom: solid 5px $border-color;
 
   h1, h2 {
     line-height: 1.6;
@@ -2092,6 +2078,14 @@ select {
     border: none;
     box-shadow: none;
     margin-bottom: 1.5rem;
+}
+
+
+/* ## 17.4: Meta Slider Styles
+------------------------------------------------------ */
+
+.metaslider {
+    margin: 0 auto;
 }
 
 

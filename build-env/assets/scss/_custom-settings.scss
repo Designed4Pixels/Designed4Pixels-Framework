@@ -51,12 +51,12 @@ $accent-color-six: #928661; 			// Gold
 
 // Dark Accent Color Settings
 
-$accent-light-color-one: lighten($accent-color-one, 15%);		// Pastel Blue
-$accent-light-color-two: lighten($accent-color-two, 15%); 		// Blue
-$accent-light-color-three: lighten($accent-color-three, 15%);	// Red
-$accent-light-color-four: lighten($accent-color-four, 15%);		// Green
-$accent-light-color-five: lighten($accent-color-five, 15%);		// Violet
-$accent-light-color-six: lighten($accent-color-six, 15%); 		// Gold
+$accent-light-color-one: lighten($accent-color-one, 20%);		// Pastel Blue
+$accent-light-color-two: lighten($accent-color-two, 20%); 		// Blue
+$accent-light-color-three: lighten($accent-color-three, 20%);	// Red
+$accent-light-color-four: lighten($accent-color-four, 20%);		// Green
+$accent-light-color-five: lighten($accent-color-five, 20%);		// Violet
+$accent-light-color-six: lighten($accent-color-six, 20%); 		// Gold
 
 
 // 2.0 Breakpoints
@@ -109,7 +109,7 @@ $logobar-border-color: $off-white;
 $logobar-link-color: #888 !default;
 $logobar-input-width: 200px !default;
 $logobar-height: 68px !default;
-$logobar-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+$logobar-shadow: 0 5px 9px -3px rgba(100, 100, 100, 0.1);
 $nav-hover-background: $off-white;
 $nav-hover-color: #666;
 
@@ -125,10 +125,10 @@ $sidebar-first-widget-margin-top: 0;
 // 9.0 Hero Image Feature
 // -----------------------
 
-$image-feature-mask: rgba(255, 255, 255, 0.7);
+$image-feature-mask: rgba(255, 255, 255, 0.8);
 $image-feature-background: $light-black;
 $image-feature-color: #999;
-$image-feature-header-color: #666;
+$image-feature-header-color: #333;
 
 
 // 10.0 Icon Box Feature
@@ -153,8 +153,8 @@ $parallax-font-color: #777;
 // ---------------------------
 
 $cta-feature-background: #fefefe;
-$cta-feature-color: #c6c6c6; 
-$cta-feature-border: #f1f1f1;
+$cta-feature-color: #fefefe; 
+$cta-feature-border: #a8a8a8;
 $cta-feature-header-color: #666;
 $cta-feature-sub-header-color: #999;
 $cta-feature-hr-color: darken( $cta-feature-background, 10% );
@@ -183,3 +183,4 @@ $footer-border-top: $border-color;
 
 $offcanvas-inner-margin: 35px 0 0;
 $offcanvas-background: #fefefe;
+$offcanvas-close-button-color: #d6d6d6;
