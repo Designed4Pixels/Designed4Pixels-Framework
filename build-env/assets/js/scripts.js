@@ -41,8 +41,13 @@ jQuery(window).on('load', function() {
 
     // Applies Height of WP Admin Bar, Info Bar, and Logo Bar to content.
     jQuery( "#home-feature-section-1 .image-feature .image-mask" ).css( "height", "+=" + index);
-    jQuery( "#home-feature-section-1 .slider-feature" ).css( "margin-top", "+=" + index);
     jQuery( "#off-canvas-top .off-canvas-inner" ).css( "margin-top", "+=" + index );
+
+    // Special Case
+    if ( init_settings.show_admin_bar ) {
+		index = index - 35;
+	}
+    jQuery( "#home-feature-section-1 .slider-feature" ).css( "margin-top", "+=" + index);
 
 
 });
